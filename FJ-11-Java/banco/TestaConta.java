@@ -12,6 +12,10 @@ class TestaConta {
 		contaJef.numero = 002;
 		contaJef.saldo = 3000;
 
+
+		System.out.println(contaNiko.titular);
+		System.out.println(contaNiko.saldo);
+
 	}
 	
 }

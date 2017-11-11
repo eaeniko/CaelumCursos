@@ -11,7 +11,11 @@ class Academia {
 
 	System.out.println("IMC:" + imc);
 
-
+		if(idade > 18) {
+			System.out.println("Pode matricular!");
+		} else {
+			System.out.println("Não pode matricular");
+		}
 	}
 	
 

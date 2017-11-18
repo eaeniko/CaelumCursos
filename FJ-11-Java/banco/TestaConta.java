@@ -2,27 +2,26 @@ class TestaConta {
 
 	public static void main(String[] args) {
 
-		Conta contaNiko = new Conta();
-		contaNiko.titular = "Nikolai";
-		contaNiko.numero = 001;
-		contaNiko.saldo = 5000;
+		Conta c1 = new Conta();
+		c1.titular = "Nikolai";
+		c1.numero = 001;
+		c1.saldo = 50;
+		c1.DataAbertura = "18/11/2017";
 
-		Conta contaJef = new Conta();
-		contaJef.titular = "Jefferson";
-		contaJef.numero = 002;
-		contaJef.saldo = 3000;
+		Conta c2 = c1;
+
+		if (c1 == c2) {
+			System.out.println("Iguais");
+		} else {
+			System.out.println("Diferentes");
+		}
 
 
-		contaNiko.deposita(400);
-		contaJef.deposita(900);
 		
-		contaNiko.saca(900);
+		c1.deposita(100);
 
-		
-
-
-		System.out.println(contaNiko.titular);
-		System.out.println(contaNiko.saldo);
+		System.out.println(c1.recuperaDadosParaImpressao());
+		System.out.println(c2.recuperaDadosParaImpressao());
 
 
 	}

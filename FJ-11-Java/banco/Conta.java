@@ -1,12 +1,12 @@
 class Conta {
-	String titular;
 	int numero;
 	double saldo;
+	String titular;
+	String DataAbertura;
+	String agencia;
 
 
-	void deposita(double valor) {
-		this.saldo += valor;
-	}
+	
 
 	void saca(double valor) {
 
@@ -16,8 +16,24 @@ class Conta {
 
 		} 
 	}
+	void deposita(double valor) {
+		this.saldo += valor;
+	}
 
 
+	double calculaRendimento() {
+		return this.saldo * 0.1;
+	}
+
+	String recuperaDadosParaImpressao() {
+		String dados = "\nTitular: " + this.titular;
+		dados += "\nNumero: " + this.numero;
+		dados += "\nData de Abertura: " + this.DataAbertura;
+		dados += "\nSaldo com Bonus: " +this.saldo;
+		dados += "\nRendimento Mensal: "+ this.calculaRendimento();
+
+		return dados;
+	}
 }
 
 

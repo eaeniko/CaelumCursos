@@ -2,34 +2,15 @@ class TestaConta {
 
 	public static void main(String[] args) {
 
-		Cliente nikolai = new Cliente();
-		// nikolai.nome = "Nikolai";
-		// nikolai.cpf = "000.429";
+		Conta c1 = new Conta();
+		c1.titular = "Nikolai";
+		c1.numero = 001;
+		c1.saldo = 50;
+		c1.DataAbertura = "18/11/2017";
 
-		Conta contaNiko = new Conta();
+		Conta c2 = c1;
 
-		contaNiko.titular.nome = "Nikolai" ;
-
-		contaNiko.numero = 001;
-		contaNiko.deposita(100);
-		contaNiko.DataAbertura = "18/11/2017";
-
-		
-		// Cliente lucas = new Cliente();
-		// lucas.nome = "lucas";
-		// lucas.cpf = "000.429";
-
-		// Conta contaLucas = new Conta();
-
-		// contaLucas.titular = lucas ;
-		// contaLucas.numero = 001;
-		// contaLucas.setSaldo(50);
-		// contaLucas.DataAbertura = "18/11/2017";
-
-
-		Conta contaLucas = contaNiko;
-
-		if (contaNiko == contaLucas) {
+		if (c1 == c2) {
 			System.out.println("Iguais");
 		} else {
 			System.out.println("Diferentes");
@@ -37,10 +18,10 @@ class TestaConta {
 
 
 		
-		contaNiko.deposita(100);
+		c1.deposita(100);
 
-		System.out.println(contaNiko.recuperaDadosParaImpressao());
-		System.out.println(contaLucas.recuperaDadosParaImpressao());
+		System.out.println(c1.recuperaDadosParaImpressao());
+		System.out.println(c2.recuperaDadosParaImpressao());
 
 
 	}

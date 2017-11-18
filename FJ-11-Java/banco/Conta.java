@@ -27,7 +27,7 @@ class Conta {
 	}
 
 	String recuperaDadosParaImpressao() {
-		String dados = "\nTitular: " + this.titular.nome;
+		String dados = "\nTitular: " + this.titular;
 		dados += "\nNumero: " + this.numero;
 		dados += "\nData de Abertura: " + this.DataAbertura;
 		dados += "\nSaldo com Bonus: " +this.saldo;

@@ -3,12 +3,12 @@ class TestaConta {
 	public static void main(String[] args) {
 
 		Cliente nikolai = new Cliente();
-		// nikolai.nome = "Nikolai";
-		// nikolai.cpf = "000.429";
+		nikolai.nome = "Nikolai";
+		nikolai.cpf = "000.429";
 
 		Conta contaNiko = new Conta();
 
-		contaNiko.titular.nome = "Nikolai" ;
+
 
 		contaNiko.numero = 001;
 		contaNiko.deposita(100);

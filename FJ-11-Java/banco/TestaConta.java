@@ -2,9 +2,9 @@ class TestaConta {
 
 	public static void main(String[] args) {
 
-		Cliente nikolai = new Cliente();
-		nikolai.setNome("Nikolai");
-		nikolai.setCpf("000.429");
+		Cliente nikolai = new Cliente("Nikolai", "000.429");
+		// nikolai.setNome("Nikolai");
+		// nikolai.setCpf("000.429");
 
 		Conta contaNiko = new Conta();
 		contaNiko.setTitular(nikolai);

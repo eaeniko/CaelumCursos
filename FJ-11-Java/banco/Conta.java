@@ -5,6 +5,7 @@ class Conta {
 	private double saldo;
 	private String DataAbertura;
 
+
  	public void setTitular(Cliente titular){
  		this.titular = titular;
  	}
@@ -53,6 +54,7 @@ class Conta {
 
 	public String recuperaDadosParaImpressao() {
 		String dados = "\nTitular: " + this.titular.getNome();
+		dados += "\nNumero: " + this.titular.getCpf();
 		dados += "\nNumero: " + this.numero;
 		dados += "\nData de Abertura: " + this.DataAbertura;
 		dados += "\nSaldo com Bonus: " +this.saldo;

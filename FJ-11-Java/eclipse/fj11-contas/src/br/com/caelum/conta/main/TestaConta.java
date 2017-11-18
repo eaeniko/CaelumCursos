@@ -1,3 +1,5 @@
+package br.com.caelum.conta.main;
+import br.com.caelum.conta.pf.modelo.Conta;
 
 public class TestaConta {
 

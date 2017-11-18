@@ -1,3 +1,4 @@
+package br.com.caelum.conta.pf.modelo;
 
 public class Conta {
 	private String titular;

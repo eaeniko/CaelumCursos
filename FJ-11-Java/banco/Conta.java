@@ -1,12 +1,13 @@
 class Conta {
+	Cliente titular;
 	int numero;
-	double saldo;
-	String titular;
+	int agencia;
+	private double saldo;
 	String DataAbertura;
-	String agencia;
 
-
-	
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 	void saca(double valor) {
 
@@ -26,7 +27,7 @@ class Conta {
 	}
 
 	String recuperaDadosParaImpressao() {
-		String dados = "\nTitular: " + this.titular;
+		String dados = "\nTitular: " + this.titular.nome;
 		dados += "\nNumero: " + this.numero;
 		dados += "\nData de Abertura: " + this.DataAbertura;
 		dados += "\nSaldo com Bonus: " +this.saldo;

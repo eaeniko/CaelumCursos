@@ -3,16 +3,16 @@ class TestaConta {
 	public static void main(String[] args) {
 
 		Cliente nikolai = new Cliente();
-		nikolai.nome = "Nikolai";
-		nikolai.cpf = "000.429";
+		nikolai.setNome("Nikolai");
+		nikolai.setCpf("000.429");
 
 		Conta contaNiko = new Conta();
+		contaNiko.setTitular(nikolai);
 
 
-
-		contaNiko.numero = 001;
+		contaNiko.setNumero(001);
 		contaNiko.deposita(100);
-		contaNiko.DataAbertura = "18/11/2017";
+		contaNiko.setDataAbertura("18/11/2017");
 
 		
 		// Cliente lucas = new Cliente();

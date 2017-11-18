@@ -15,19 +15,19 @@ class TestaConta {
 		contaNiko.setDataAbertura("18/11/2017");
 
 		
-		// Cliente lucas = new Cliente();
-		// lucas.nome = "lucas";
-		// lucas.cpf = "000.429";
+	
+	Cliente lucas = new Cliente("Lucas", "011.001");
+		// lucas.setNome("lucas");
+		// lucas.setCpf("000.429");
 
-		// Conta contaLucas = new Conta();
-
-		// contaLucas.titular = lucas ;
-		// contaLucas.numero = 001;
-		// contaLucas.setSaldo(50);
-		// contaLucas.DataAbertura = "18/11/2017";
+		Conta contaLucas = new Conta();
+		contaLucas.setTitular(lucas);
 
 
-		Conta contaLucas = contaNiko;
+		contaLucas.setNumero(002);
+		contaLucas.deposita(50);
+		contaLucas.setDataAbertura("18/11/2016");
+
 
 		if (contaNiko == contaLucas) {
 			System.out.println("Iguais");

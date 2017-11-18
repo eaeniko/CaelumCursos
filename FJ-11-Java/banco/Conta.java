@@ -4,8 +4,14 @@ class Conta {
 	private int agencia;
 	private double saldo;
 	private String DataAbertura;
+	private static int identificadorTotal;
 
-
+	public Conta() {
+		identificadorTotal++;
+	}
+	public  static int getIdentificadorTotal() {
+		return identificadorTotal;
+	}
  	public void setTitular(Cliente titular){
  		this.titular = titular;
  	}
@@ -54,11 +60,12 @@ class Conta {
 
 	public String recuperaDadosParaImpressao() {
 		String dados = "\nTitular: " + this.titular.getNome();
-		dados += "\nNumero: " + this.titular.getCpf();
+		dados += "\nCPF: " + this.titular.getCpf();
 		dados += "\nNumero: " + this.numero;
 		dados += "\nData de Abertura: " + this.DataAbertura;
 		dados += "\nSaldo com Bonus: " +this.saldo;
 		dados += "\nRendimento Mensal: "+ this.getRendimento();
+		dados += "\nIdentificador: "+ Conta.getIdentificadorTotal();
 
 		return dados;
 	}

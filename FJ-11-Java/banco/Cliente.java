@@ -3,7 +3,7 @@ class Cliente {
 	private String cpf;
 
 	public Cliente() {
-
+		
 	}
 	public Cliente(String nome) {
 		this.nome = nome;

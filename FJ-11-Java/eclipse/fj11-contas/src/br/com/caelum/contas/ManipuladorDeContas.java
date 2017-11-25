@@ -5,8 +5,9 @@ import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
 import br.com.caelum.javafx.api.util.Evento;
 
-public class ManipuladorDeContas extends Conta {
+public class ManipuladorDeContas {
 	
+
 	private Conta conta;
 	public void criaConta(Evento evento) {
 		

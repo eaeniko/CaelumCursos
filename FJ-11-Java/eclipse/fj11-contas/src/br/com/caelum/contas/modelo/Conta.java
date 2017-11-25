@@ -5,16 +5,15 @@ package br.com.caelum.contas.modelo;
  * @author Nikolai
  * 
  */
-public class Conta {
+public abstract class Conta {
 	private String titular;
 	private String agencia;
 	private String dataAbertura;
 	protected double saldo;
 	private int numero;
 	
-	public String getTipo() {
-		return "Conta";
-	}
+	public abstract String getTipo();
+	
 	public String getTitular() {
 		return titular;
 	}

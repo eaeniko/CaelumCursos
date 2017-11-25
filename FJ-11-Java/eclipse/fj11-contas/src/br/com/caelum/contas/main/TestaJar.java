@@ -1,4 +1,4 @@
-package br.com.caelum.conta.main;
+package br.com.caelum.contas.main;
 
 import br.com.caelum.javafx.api.main.OlaMundo;
 

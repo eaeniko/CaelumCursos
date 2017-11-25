@@ -1,4 +1,4 @@
-package br.com.caelum.conta.pf.modelo;
+package br.com.caelum.contas.modelo;
 
 /**
  * Classe que gerencia as contas do sistema
@@ -11,6 +11,8 @@ public class Conta {
 	private String dataAbertura;
 	private double saldo;
 	private int numero;
+	
+	
 	public String getTitular() {
 		return titular;
 	}
@@ -50,7 +52,7 @@ public class Conta {
 		// TODO Auto-generated method stub
 		this.saldo += valor;
 	}
-	public void saca(int valor) {
+	public void saca(double valor) {
 		// TODO Auto-generated method stub
 		if (saldo >= valor) {
 			saldo -= valor;

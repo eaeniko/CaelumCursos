@@ -16,19 +16,22 @@ public class ManipuladorDeContas extends Conta {
 		} else if (tipo.equals("Conta Poupança")) {
 			this.conta = new ContaPoupanca();
 		}
-		this.conta = new Conta();
+	
 		this.conta.setTitular(evento.getString("titular"));
 		this.conta.setAgencia(evento.getString("agencia"));
 		this.conta.setNumero(evento.getInt("numero"));
 	}
 	
 	public void deposita(Evento evento) {
-		double valorASerDepositado = evento.getDouble("valor");
+		double valorASerDepositado = evento.getDouble("valorOperacao");
 		conta.deposita(valorASerDepositado);
 	}
 	public void saca(Evento evento) {
-		double valorSaque = evento.getDouble("valor");
-		conta.saca(valorSaque);
+		double valor = evento.getDouble("valorOperacao");
+		 this.conta.saca(valor);
+		}
+	public void transfere(Evento evento) {
+		Conta destino = (Conta) evento.getSelecionadoNoCombo("destino");
+		conta.transfere(evento.getDouble("valorTransferencia"), destino);
 	}
-
 }

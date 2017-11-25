@@ -9,10 +9,12 @@ public class Conta {
 	private String titular;
 	private String agencia;
 	private String dataAbertura;
-	private double saldo;
+	protected double saldo;
 	private int numero;
 	
-	
+	public String getTipo() {
+		return "Conta";
+	}
 	public String getTitular() {
 		return titular;
 	}
@@ -49,17 +51,19 @@ public class Conta {
 	 * @param valor o valor a ser depositado
 	 */
 	public void deposita(double valor) {
-		// TODO Auto-generated method stub
 		this.saldo += valor;
 	}
 	public void saca(double valor) {
-		// TODO Auto-generated method stub
 		if (saldo >= valor) {
 			saldo -= valor;
 		}
 		
 	}
-	
+
+	public void transfere(double valor, Conta conta) {
+		this.saca(valor);
+		conta.deposita(valor);
+	}
 	
 	
 }

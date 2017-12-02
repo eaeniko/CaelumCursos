@@ -49,6 +49,7 @@ public abstract class Conta {
 	 * Método que incrementa o saldo da conta
 	 * @param valor o valor a ser depositado
 	 */
+	
 	public void deposita(double valor) {
 		if (valor < 0) {
 			throw new IllegalArgumentException("Você tentou depositar um numero negativo :x");
@@ -73,6 +74,14 @@ public abstract class Conta {
 	public String toString() {
 		return "Titular: " + this.titular + ", Numero: " + this.numero;
 	}
-	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		Conta outraConta = (Conta) obj;
+		return this.numero == outraConta.numero &&
+				this.agencia.equals(outraConta.agencia);
+	}	
 	
 }

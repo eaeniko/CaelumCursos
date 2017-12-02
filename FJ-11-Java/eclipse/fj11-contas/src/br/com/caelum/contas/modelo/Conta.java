@@ -50,7 +50,12 @@ public abstract class Conta {
 	 * @param valor o valor a ser depositado
 	 */
 	public void deposita(double valor) {
-		this.saldo += valor;
+		if (valor < 0) {
+			throw new IllegalArgumentException("Você tentou depositar um numero negativo :x");
+		} else {
+			this.saldo += valor;
+			
+		}
 	}
 	public void saca(double valor) {
 		if (saldo >= valor) {

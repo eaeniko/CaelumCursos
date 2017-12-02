@@ -7,6 +7,13 @@ public class ContaCorrente extends Conta implements Tributavel {
 	
 	@Override
 	public void saca(double valor) {
+		
+		if(valor < 0) {
+			throw new IllegalArgumentException("Saldo menor que 0");
+		} 
+		if (this.saldo < valor ){
+			throw new SaldoInsuficienteException(valor);
+		}
 		this.saldo -= (valor + 0.10);
 	}
 	

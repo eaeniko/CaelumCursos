@@ -14,5 +14,6 @@ public class TestaConta {
 
 		System.out.println(conta.getTitular());
 		System.out.println(conta.getSaldo());
+		System.out.println(conta);
 	}
 }

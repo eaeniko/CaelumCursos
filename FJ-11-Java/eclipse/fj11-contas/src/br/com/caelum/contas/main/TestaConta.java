@@ -10,6 +10,7 @@ public class TestaConta {
 		Conta conta = new ContaCorrente();
 		conta.setTitular("Nikolai");
 		conta.deposita(600.5);
+		conta.setNumero(123);
 		conta.saca(400);
 
 		System.out.println(conta.getTitular());

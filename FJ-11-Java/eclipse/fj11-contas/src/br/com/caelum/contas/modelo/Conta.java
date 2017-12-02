@@ -69,5 +69,10 @@ public abstract class Conta {
 		conta.deposita(valor);
 	}
 	
+	@Override
+	public String toString() {
+		return "Titular: " + this.titular + ", Numero: " + this.numero;
+	}
+	
 	
 }

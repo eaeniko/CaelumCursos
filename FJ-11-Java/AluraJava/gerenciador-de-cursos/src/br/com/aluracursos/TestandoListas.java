@@ -6,45 +6,46 @@ import java.util.Collections;
 public class TestandoListas {
 
 	public static void main(String[] args) {
-		String aula1 = "Conhecendo mais sobre listas";
-		String aula2 = "Modelando a classe Aula";
-		String aula3 = "Trabalhando com Cursos e Sets";
+		String curso1 = "Conhecendo mais sobre listas";
+		String curso2 = "Modelando a classe curso";
+		String curso3 = "Trabalhando com Cursos e Sets";
 
-		ArrayList<String> aulas = new ArrayList<>();
-		aulas.add(aula1);
-		aulas.add(aula2);
-		aulas.add(aula3);
-
-		System.out.println(aulas);
-
-		aulas.remove(0);
-
-		System.out.println(aulas);
-
-		for (String aula : aulas) {
-			System.out.println("Aula: " + aula);
+		ArrayList<String> cursos = new ArrayList<>();
+		cursos.add(curso1);
+		cursos.add(curso2);
+		cursos.add(curso3);
+				            
+		System.out.println(cursos);
+                            
+		cursos.remove(0);    
+                            
+		System.out.println(cursos);
+                            
+		for (String curso : cursos) {
+			System.out.println("curso: " + curso);
 		}
 
-		String primeiraAula = aulas.get(0);
-		System.out.println("A primeira aula é: " + primeiraAula);
+		String primeiracurso = cursos.get(0);
+		System.out.println("A primeira curso é: " + primeiracurso);
 
-		for (int i = 0; i < aulas.size(); i++) {
-			System.out.println("Aulas:" + aulas.get(i));
+		for (int i = 0; i < cursos.size(); i++) {
+			System.out.println("cursos:" + cursos.get(i));
 
 		}
 
-		System.out.println(aulas.size());
+		System.out.println(cursos.size());
 
-		aulas.forEach(aula -> {
+		cursos.forEach(curso -> {
 			System.out.println("percorrendo: ");
-			System.out.println("Aula: " + aula);
+			System.out.println("curso: " + curso);
 		});
 		
-		aulas.add("Aumento nosso conhecimento");
-		System.out.println(aulas);
+		cursos.add("Aumento nosso conhecimento");
+		System.out.println(cursos);
 		
-		Collections.sort(aulas);
-		System.out.println(aulas);
+		Collections.sort(cursos);
+		System.out.println("Ordenando para ordem alfabética");
+		System.out.println(cursos);
 
 	}
 }

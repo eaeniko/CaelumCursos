@@ -18,4 +18,9 @@ public class Aula {
 	public int getTempo() {
 		return tempo;
 	}
+	
+	@Override
+	public String toString() {
+		return "[Aula: " + this.titulo + ", " + this.tempo + " minutos]";
+	}
 }

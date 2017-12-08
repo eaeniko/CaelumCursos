@@ -1,6 +1,7 @@
 package br.com.aluracursos;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class TestaListaDeAula {
 
@@ -15,5 +16,9 @@ public class TestaListaDeAula {
 		aulas.add(a3);
 
 		System.out.println(aulas);
+		
+		aulas.sort(Comparator.comparing(Aula::getTempo));
+		System.out.println(aulas);
 	}
+	
 }

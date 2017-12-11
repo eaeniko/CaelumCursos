@@ -13,13 +13,13 @@ public class Curso {
 	public List<Aula> getAulas() {
 		return Collections.unmodifiableList(aulas);
 	}
-	
+
 	public Set<Aluno> getAlunos() {
-	    return Collections.unmodifiableSet(alunos);
+		return Collections.unmodifiableSet(alunos);
 	}
-	
-	public void matricula(Aluno aluno){
-	    this.alunos.add(aluno);
+
+	public void matricula(Aluno aluno) {
+		this.alunos.add(aluno);
 	}
 
 	public String getNome() {
@@ -42,7 +42,7 @@ public class Curso {
 		this.nome = nome;
 		this.instrutor = instrutor;
 	}
-	
+
 	public void adiciona(Aula aula) {
 		this.aulas.add(aula);
 	}
@@ -54,10 +54,24 @@ public class Curso {
 		}
 		return tempoTotal;
 	}
+
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
+	}
+
 	@Override
 	public String toString() {
-		return "[Curso: "+ this.nome + " tempo total: " + this.getTempoTotal() + " aulas: ["+ this.aulas+"] ]";
+		return "[Curso: " + this.nome + " tempo total: " + this.getTempoTotal() + " aulas: [" + this.aulas + "] ]";
 	}
-	
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		Aluno outroAulno = (Aluno) obj;
+		return this.nome.equals(outroAulno.getNome());
+	}
+
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode();
+	}
 }

@@ -16,15 +16,14 @@ public class OrdenaStrings {
 		palavras.sort(comparador);
 		System.out.println(palavras);
 
-		// classe anonima, bem comum..
-		Consumer<String> consumidor = new Consumer<String>() {
+		
+		palavras.forEach(new Consumer<String>() {
 			@Override
 			public void accept(String s) {
 				System.out.println(s);
 			
 			}
-		};
-		palavras.forEach(consumidor);
+		});
 	
 
 	

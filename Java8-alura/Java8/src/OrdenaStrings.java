@@ -17,17 +17,11 @@ public class OrdenaStrings {
 		System.out.println(palavras);
 
 		
-		palavras.forEach(new Consumer<String>() {
-			@Override
-			public void accept(String s) {
+		palavras.forEach((String s) -> {
 				System.out.println(s);
 			
-			}
 		});
-	
-
-	
-
+}
 	/*
 	 * class ImprimeNaLinha implements Consumer<String> {
 	 * 
@@ -35,9 +29,6 @@ public class OrdenaStrings {
 	 * 
 	 * }
 	 */
-
-
-
 
 	class ComparadorPorTamanho implements Comparator<String> {
 		public int compare(String s1, String s2) {
@@ -47,4 +38,4 @@ public class OrdenaStrings {
 				return 1;
 			return 0;
 		}
-}
+	}

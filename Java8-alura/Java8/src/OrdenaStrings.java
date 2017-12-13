@@ -16,26 +16,23 @@ public class OrdenaStrings {
 		palavras.sort(comparador);
 		System.out.println(palavras);
 
-		
-		palavras.forEach((String s) -> {
-				System.out.println(s);
-			
-		});
-}
-	/*
-	 * class ImprimeNaLinha implements Consumer<String> {
-	 * 
-	 * @Override public void accept(String s) { System.out.println(s); }
-	 * 
-	 * }
-	 */
-
-	class ComparadorPorTamanho implements Comparator<String> {
-		public int compare(String s1, String s2) {
-			if (s1.length() < s2.length())
-				return -1;
-			if (s1.length() > s2.length())
-				return 1;
-			return 0;
-		}
+		palavras.forEach((s) -> System.out.println(s));
 	}
+}
+/*
+ * class ImprimeNaLinha implements Consumer<String> {
+ * 
+ * @Override public void accept(String s) { System.out.println(s); }
+ * 
+ * }
+ */
+
+class ComparadorPorTamanho implements Comparator<String> {
+	public int compare(String s1, String s2) {
+		if (s1.length() < s2.length())
+			return -1;
+		if (s1.length() > s2.length())
+			return 1;
+		return 0;
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fj21-agenda/WebContent/adiciona-contato.html&apos; to &apos;adiciona-contato.jsp&apos;" description="Rename resource &apos;adiciona-contato.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/adiciona-contato.html" name="adiciona-contato.jsp" stamp="1512694022353" updateReferences="true"/>
+</session>

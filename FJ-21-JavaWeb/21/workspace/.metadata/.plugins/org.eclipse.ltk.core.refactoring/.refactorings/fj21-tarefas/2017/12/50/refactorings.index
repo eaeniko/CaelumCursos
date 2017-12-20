@@ -1,0 +1,13 @@
+1513118619137	Move 'adicionada.jsp' to 'tarefa'
+1513118630413	Move 'adicionada.jsp' to 'views'
+1513119755299	Move 'adicionada.jsp' to 'tarefa'
+1513125324297	Delete element
+1513125331960	Delete element
+1513125337986	Delete element
+1513202941240	Delete element
+1513211110038	Rename resource 'Finaliza.jsp'
+1513285563696	Encapsulate field 'id'
+1513376413823	Delete element
+1513376422199	Move 'log4j.properties' to 'META-INF'
+1513384358881	Infer generic type arguments
+1513384410241	Infer generic type arguments

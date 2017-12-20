@@ -1,0 +1,7 @@
+package br.com.caelum.mvc.logica;
+
+public interface Logica {
+	String	executa(HttpServletRequest	req,
+			HttpServletResponse	res)	throws	Exception;
+	
+}
